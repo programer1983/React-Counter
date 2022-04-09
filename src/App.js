@@ -22,10 +22,13 @@ function App() {
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
       <hr></hr>
-      <CounterContext.Provider value="Hello Context">
-         <FComponent counter={counter}/>
+      <CounterContext.Provider 
+        value={{
+          counter,
+          setCounter,
+        }}>
+         <FComponent />
            <hr></hr>
-         <CComponent counter={counter}/>
       </CounterContext.Provider>
     </div>
   );
